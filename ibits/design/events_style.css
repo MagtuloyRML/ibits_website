@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    background: #ccc;
+    margin: 30px 50px;
+    line-height: 1.4;
+}
+
+.top-container1{
+	position: center;
+	width: 100%;
+	height: 100%;
+	margin: 10px;
+	background-color: #1D212B;
+	font-family: 'Permanent Marker', cursive;
+}
+
+.showcase1 {
+	position: relative;
+    grid-area: showcase;
+    height: 900px;
+    background-color: #183153;
+    background-size:contain;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.showcase1 .slide{
+	z-index: 1;
+	position: absolute;
+	width: 85%;
+	clip-path: circle(0.5% at 0 50%);
+}
+
+.showcase1 .slide.active{
+	clip-path: circle(150% at 0 50%);
+	transition: 2s;
+	transition-property: clip-path;
+}
+
+.showcase1 .slide img{
+	z-index: 1;
+	width: 100%;
+	border-radius: 5px;
+}
+.showcase1 .slide .inform{
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+    padding: 30px 45px;
+}
+
+.showcase1 .slide .inform h2{
+	color: #ffffff;
+	font-size: 50px;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 2px;
+}
+
+.showcase1 .slide .inform p{
+	color: #ffffff;
+	background: rgba(0, 0, 0 ,0.5);
+	font-size: 25px;
+	width: 100%;
+	padding: 10px;
+	border-radius: 4px;
+}
+/*slidebuttons*/
+.top-container1 .showcase1 .dot-navigation{
+	z-index: 2;
+	position: absolute;
+	display: flex;
+	left: 50%;
+	bottom: 100px;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+.showcase1 .dot-navigation .btttn{
+	background: rgba(255, 255, 255, 0.5);
+	width: 18px;
+	height: 18px;
+	margin: 12px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.showcase1 .dot-navigation .btttn.active{
+	background: #2696E9;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+{/*small windows size*/}
+@media (max-width: 820px){
+	.showcase1{
+		width: 600px;
+		height: 375px;
+	}
+
+	.showcase1 .slide .inform{
+		padding: 10px 25px;
+	}
+
+	.showcase1 .slide .inform h2{
+		font-size: 35px;
+	}
+	.showcase1 .slide .inform p{
+		width: 70%;
+		font-size: 15px;
+
+	}
+
+	.showcase1 .dot-navigation{
+		botton: 25px;
+	}
+
+	.showcase1 .dot-navigation .btttn{
+		width: 10px;
+		height: 10px;
+		margin: 8px;
+	}
+}
+@media (max-width: 620px){
+  .showcase1{
+  	padding-top: 5px;
+    width: 400px;
+    height: 250px;
+  }
+
+  .showcase1 .slide .inform{
+    padding: 10px 20px;
+  }
+
+  .showcase1 .slide .inform h2{
+    font-size: 30px;
+  }
+
+  .showcase1 .slide .inform p{
+    width: 80%;
+    font-size: 13px;
+  }
+
+  .showcase1 .dot-navigation{
+    bottom: 15px;
+  }
+
+ .showcase1 .dot-navigation .btttn{
+    width: 8px;
+    height: 8px;
+    margin: 6px;
+  }
+}
+
+@media(max-width: 500px){
+    .showcase{
+        padding-top: 5px;
+    }
+    .showcase1 .event-slider{
+        width: 320px;
+        height: 200px;
+    }
+
+    .showcase1 .event-slider .slide .inform{
+        padding: 3px 10px;
+    }
+
+    .showcase1 .event-slider .slide .inform h2{
+        font-size: 20px;
+    }
+    .showcase1 .event-slider .slide .inform p{
+        width: 60%;
+        font-size: 10px;
+    }
+
+    .showcase1 .event-slider .dot-navigation{
+        bottom: 10px;
+    }
+
+}
+
+
